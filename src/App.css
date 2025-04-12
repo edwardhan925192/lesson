@@ -4,3 +4,9 @@
   background-size : cover;
   background-position : center;
 }
+
+.APP {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* 이 부분 추가 */
+}
