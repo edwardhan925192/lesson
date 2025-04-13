@@ -1,6 +1,9 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom'
 
 function MainPage(props){        
+
+    let navigate = useNavigate()
+
     return (
       <div className = 'APP'>
         <div className ='main-bg'></div>
@@ -11,7 +14,7 @@ function MainPage(props){
             <div className="col-md-4" key={index}>
               <img src={`https://codingapple1.github.io/shop/shoes${index + 1}.jpg`} width="80%" />
               <h4>
-              <Link to="/detail"> {shoe.title} </Link>
+                <p onClick={() => { navigate(`/detail/${index}`) }}> {shoe.title} </p>
               </h4>
               <p>{shoe.price}</p>            
             </div>            
